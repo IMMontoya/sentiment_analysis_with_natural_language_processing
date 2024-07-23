@@ -1,6 +1,6 @@
 # Sentiment Analysis of IMDB Movie Reviews
 
-[Link To Notebook](/nlp_analysis_movie_reviews.ipynb)
+[Link to Notebook](/nlp_analysis_movie_reviews.ipynb)
 
 ## Project Overview
 
