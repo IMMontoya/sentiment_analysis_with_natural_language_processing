@@ -1,1 +1,5 @@
+# The data directory
 /data
+
+# All files that begin with ._ (hidden files on Mac)
+._*
