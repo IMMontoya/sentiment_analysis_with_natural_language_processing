@@ -1,25 +1,26 @@
 # Sentiment Analysis of IMDB Movie Reviews
 
-[Link to Notebook](/nlp_analysis_movie_reviews.ipynb)
+## Table of Contents
+
+- [Notebook](/nlp_analysis_movie_reviews.ipynb)
+- [Project Overview](#project-overview)
+- [Data Preprocessing](#data-preprocessing)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Model Training and Evaluation](#model-training-and-evaluation)
+- [Conclusion](#conclusion)
+- [Future Work](#future-work)
+- [Libraries Used](#libraries-used)
 
 ## Project Overview
 
 The goal of this project is to develop a machine learning model that can automatically classify IMDB movie reviews as either positive or negative. This involves using a dataset of IMDB reviews labeled by sentiment to train and evaluate various classification models.
 
-### Project Goals:
+### Project Goals
 
 - Achieve an F1 score of at least 0.85 in classifying movie reviews.
 - Explore and preprocess the data to address class imbalances and prepare it for modeling.
 - Train and compare the performance of at least three different models.
 - Conduct an analysis of the models' performance and present the findings.
-
-## Table of Contents
-
-1. [Data Preprocessing](#data-preprocessing)
-2. [Exploratory Data Analysis](#exploratory-data-analysis)
-3. [Model Training and Evaluation](#model-training-and-evaluation)
-4. [Conclusion](#conclusion)
-5. [Future Work](#future-work)
 
 ## Data Preprocessing
 
@@ -135,8 +136,21 @@ Each model was further tested with a small dataset of 8 additional reviews. The 
 The Logistic Regression model and LightGBM model both performed well enough to meet the F1 score threshold of .85 set by the client. The Random forrest model did not clear the threshold. No hyper parameter tunning was performed with any model, and I suspect that the LightGBM model would benefit more from tuning while the Logistic Regression model probably wouldn't. This can be explored more in later iterations.
 
 **On my reviews:**  
-While the Logistic Regression and LightGBM models performed significantly worse on the `my_reviews` dataset, it is important to consider that this is an exceedingly small dataset of only 8 records. Additionally, the average length of these reviews were far less than the average length of the train or test sets - indicating that model probably performs better with longer reviews. Intuitively, this makes sense, longer reviews means more tokens to vectorize and draw connections from. This hypothesis could also be explored in a followup to this project. 
+While the Logistic Regression and LightGBM models performed significantly worse on the `my_reviews` dataset, it is important to consider that this is an exceedingly small dataset of only 8 records. Additionally, the average length of these reviews were far less than the average length of the train or test sets - indicating that model probably performs better with longer reviews. Intuitively, this makes sense, longer reviews means more tokens to vectorize and draw connections from. This hypothesis could also be explored in a followup to this project.
 
 ## Future Work
 
 The Film Junky Union should consider further exploring Logistic Regression and LightGBM with hyperparameter tuning to see if a more accurate model can be achieved.
+
+## Libraries Used
+
+Python 3.10.9  
+numpy=1.25.2  
+pandas=2.0.3  
+matplotlib=3.7.1  
+seaborn=0.13.1  
+tqdm=4.66.2  
+spacy=3.2.1  
+nltk=3.6.1  
+sklearn=1.2.2  
+lightgbm=3.3.1  
